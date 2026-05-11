@@ -27,6 +27,8 @@ const profile = {
     "Software Engineering student at York University building full-stack products, native iOS apps, and reliable QA workflows. I like work that sits close to users: clean interfaces, practical backend systems, and thoughtful testing that helps teams ship with confidence.",
 };
 
+const resumeUrl = `${import.meta.env.BASE_URL}Damon_Lam_COOP_Resume_site.pdf`;
+
 const playlists = [
   { label: "About Me", href: "#about", icon: Sparkles },
   { label: "Work Experience", href: "#experience", icon: BriefcaseBusiness },
@@ -214,7 +216,7 @@ function App() {
               </div>
               <div className="topbar-actions">
                 <a
-                  href="/Damon_Lam_COOP_Resume_site.pdf"
+                  href={resumeUrl}
                   className="ghost-link"
                   target="_blank"
                   rel="noreferrer"
@@ -372,7 +374,7 @@ function App() {
                   </a>
                   <a
                     className="contact-card"
-                    href="/Damon_Lam_COOP_Resume_site.pdf"
+                    href={resumeUrl}
                     target="_blank"
                     rel="noreferrer"
                   >
