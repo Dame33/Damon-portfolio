@@ -20,11 +20,11 @@ import "./App.css";
 
 const profile = {
   name: "Damon Lam",
-  title: "Software engineer - Toronto",
+  title: "Software Engineer - Toronto",
   tagline: "Striving to be a better engineer and person.",
   avatar: "https://avatars.githubusercontent.com/u/153030146?v=4",
   bio:
-    "Software Engineering student at York University building full-stack products, native iOS apps, and reliable QA workflows. I like work that sits close to users: clean interfaces, practical backend systems, and thoughtful testing that helps teams ship with confidence.",
+    "Software Engineering student at York University building full-stack products, native iOS apps, and reliable QA workflows. I’m passionate about building technology that creates meaningful experiences and transforms ideas into products people genuinely enjoy using. Outside of development, I enjoy basketball, fitness, and music, which help fuel my creativity, discipline, and teamwork. I’m always eager to learn, connect with new people, and collaborate with others who are driven to build impactful things.",
 };
 
 const resumeUrl = `${import.meta.env.BASE_URL}Damon_Lam_COOP_Resume_site.pdf`;
@@ -250,7 +250,7 @@ function App() {
             <section className="artist-hero" aria-labelledby="hero-heading">
               <img className="artist-avatar" src={profile.avatar} alt="Damon Lam" />
               <div className="hero-copy">
-                <p className="verified">Software portfolio</p>
+                <p className="verified">Software Portfolio</p>
                 <h1 id="hero-heading">{profile.name}</h1>
                 <p className="listener-line">{profile.title}</p>
                 <p className="profile-tagline">{profile.tagline}</p>
@@ -260,7 +260,7 @@ function App() {
             <div className="content-surface">
               <section className="bio-section" id="about" aria-labelledby="about-heading">
                 <div className="section-heading">
-                  <h2 id="about-heading">About</h2>
+                  <h2 id="about-title">About</h2>
                   <a href="#contact" className="text-link">
                     Contact <ExternalLink size={15} aria-hidden="true" />
                   </a>
