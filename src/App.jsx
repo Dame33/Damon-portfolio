@@ -389,7 +389,7 @@ function App() {
                 <span>
                   <MapPin size={16} aria-hidden="true" /> Toronto, Canada
                 </span>
-                <span>Built as Damon Lam's artist page for software.</span>
+                <span></span>
               </footer>
             </div>
           </main>
