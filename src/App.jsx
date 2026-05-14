@@ -114,12 +114,12 @@ const projects = [
     color: "#fb7185",
   },
   {
-    title: "ChampionDex",
-    label: "Web Project",
-    stack: "HTML, CSS, Riot API",
+    title: "AssignMate",
+    label: "Java Project",
+    stack: "Java",
     description:
-      "A Pokédex-style League of Legends champion browser that displays champion data through a game-inspired interface.",
-    href: "https://github.com/Dame33/ChampionDex",
+      "A Java-based Task Manager application helps users organize and track assignments. The program allows adding, editing, viewing, and deleting tasks with details such as title, description, due date, priority, and class code.",
+    href: "https://github.com/Dame33/AssignMate",
     color: "#a78bfa",
   },
 ];
@@ -260,7 +260,7 @@ function App() {
             <div className="content-surface">
               <section className="bio-section" id="about" aria-labelledby="about-heading">
                 <div className="section-heading">
-                  <h2 id="about-title">About</h2>
+                  <h2 id="about-heading">About</h2>
                   <a href="#contact" className="text-link">
                     Contact <ExternalLink size={15} aria-hidden="true" />
                   </a>
