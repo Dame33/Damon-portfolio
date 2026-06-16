@@ -39,6 +39,16 @@ const playlists = [
 
 const workExperience = [
   {
+    role: "Software Developer",
+    team: "SOTI",
+    dates: "September 2026",
+    location: "Mississauga, ON",
+    summary:
+      "Excited for my next chapter as an Incoming Software Developer @ SOTI, joining the Xsight team.",
+    impact: "Currently playing",
+    isPlaying: true,
+  },
+  {
     role: "Software QA Analyst",
     team: "theScore - Wagering",
     dates: "Apr 2025 - Aug 2025",
@@ -175,9 +185,16 @@ function App() {
           </aside>
 
           <div className="sidebar-panel" aria-label="Now playing">
-            <p className="panel-title">Now playing</p>
-            <p className="panel-track">Software Engineering at York University</p>
-            <p className="panel-subtitle">Expected June 2027</p>
+            <div className="panel-title-row">
+              <p className="panel-title">Now playing</p>
+              <span className="playing-bars panel-bars" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </span>
+            </div>
+            <p className="panel-track">Incoming SWE @ SOTI</p>
+            <p className="panel-subtitle">September 2026</p>
           </div>
 
           <main className="main-shell" id="top">
@@ -280,10 +297,33 @@ function App() {
 
                 <div className="experience-list">
                   {workExperience.map((job, index) => (
-                    <article className="experience-row" key={`${job.role}-${job.dates}`}>
-                      <span className="track-number">{index + 1}</span>
-                      <button className="play-button" aria-label={`Play ${job.role}`}>
-                        <Play size={16} fill="currentColor" aria-hidden="true" />
+                    <article
+                      className={`experience-row ${job.isPlaying ? "is-playing" : ""}`}
+                      key={`${job.role}-${job.dates}`}
+                    >
+                      <span className="track-number">
+                        {job.isPlaying ? (
+                          <span className="playing-bars" aria-label="Currently playing" role="img">
+                            <span />
+                            <span />
+                            <span />
+                          </span>
+                        ) : (
+                          index + 1
+                        )}
+                      </span>
+                      <button
+                        className={`play-button ${job.isPlaying ? "is-playing" : ""}`}
+                        aria-label={`${job.isPlaying ? "Currently playing" : "Play"} ${job.role}`}
+                      >
+                        {job.isPlaying ? (
+                          <span className="pause-glyph" aria-hidden="true">
+                            <span />
+                            <span />
+                          </span>
+                        ) : (
+                          <Play size={16} fill="currentColor" aria-hidden="true" />
+                        )}
                       </button>
                       <div className="track-main">
                         <h3>{job.role}</h3>
