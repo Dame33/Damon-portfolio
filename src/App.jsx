@@ -41,7 +41,7 @@ const workExperience = [
   {
     role: "Software Developer",
     team: "SOTI",
-    dates: "September 2026",
+    dates: "September 2026 - Present",
     location: "Mississauga, ON",
     summary:
       "Excited for my next chapter as an Incoming Software Developer @ SOTI, joining the Xsight team.",
@@ -193,8 +193,8 @@ function App() {
                 <span />
               </span>
             </div>
-            <p className="panel-track">Incoming SWE @ SOTI</p>
-            <p className="panel-subtitle">September 2026</p>
+            <p className="panel-track">SWE @ SOTI</p>
+            <p className="panel-subtitle">September 2026 - Present</p>
           </div>
 
           <main className="main-shell" id="top">
